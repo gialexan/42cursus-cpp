@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 17:52:01 by gialexan          #+#    #+#             */
-/*   Updated: 2023/11/15 22:18:26 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/11/20 10:56:07 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,39 @@
 
 Contact::Contact(void) {}
 
-Contact::Contact(int id, std::string name, std::string phone)
-{
-    _id = id;
-    _name = name;
-    _phone = phone;
-}
-
-int Contact::getId(void)
-{
-    return _id;
-}
-
-std::string Contact::getName(void)
-{
-    return _name;
-}
-
-std::string Contact::getPhone(void)
-{
-    return _phone;
-}
-
-void Contact::toString(void)
-{
-    std::cout << "\tname: " << _name << std::endl;
-    std::cout << "\tphone: " << _phone << std::endl;
-}
-
 Contact::~Contact(void) {}
+
+std::string Contact::getName(void) {return _name;}
+
+std::string Contact::getPhone(void) {return _phone;}
+
+std::string Contact::getNickname(void) {return _nickname;}
+
+Contact Contact::createContact(void)
+{
+    Contact contact = Contact();
+
+    contact._requestInfo("NAME", contact._name);
+    contact._requestInfo("NICKNAME", contact._nickname);
+    contact._requestInfo("PHONE", contact._phone);
+
+    return contact;
+}
+
+void Contact::_requestInfo(std::string prompt, std::string &contactField)
+{
+    do
+    {
+        std::cout << BLUE << "Enter your " << BOLDBLUE << prompt << ": ";
+	    std::getline(std::cin, contactField);
+        std::cout << RESET;
+    }
+    while (_isValideField(contactField));
+}
+
+bool Contact::_isValideField(std::string contactField)
+{
+    return isspace(contactField[FIRST_CHAR]) || 
+        contactField.length() > MAX_CHARACTERS || 
+        contactField.empty();
+}
