@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 17:52:01 by gialexan          #+#    #+#             */
-/*   Updated: 2023/11/20 10:56:07 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:15:04 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ Contact::Contact(void) {}
 
 Contact::~Contact(void) {}
 
-std::string Contact::getName(void) {return _name;}
+std::string Contact::getFirstName(void) {return _firstName;}
+
+std::string Contact::getLastName(void) {return _lastName;};
 
 std::string Contact::getPhone(void) {return _phone;}
 
@@ -26,27 +28,25 @@ Contact Contact::createContact(void)
 {
     Contact contact = Contact();
 
-    contact._requestInfo("NAME", contact._name);
+    contact._requestInfo("FIRST NAME", contact._firstName);
+    contact._requestInfo("LAST NAME", contact._lastName);
     contact._requestInfo("NICKNAME", contact._nickname);
     contact._requestInfo("PHONE", contact._phone);
 
     return contact;
 }
 
-void Contact::_requestInfo(std::string prompt, std::string &contactField)
+void Contact::_requestInfo(std::string prompt, std::string &field)
 {
     do
     {
-        std::cout << BLUE << "Enter your " << BOLDBLUE << prompt << ": ";
-	    std::getline(std::cin, contactField);
-        std::cout << RESET;
+        std::cout << BLACK << "Enter your " << BLUE << prompt << BLACK << ": " << RESET;
+	    std::getline(std::cin, field);
     }
-    while (_isValideField(contactField));
+    while (_isValideField(field));
 }
 
-bool Contact::_isValideField(std::string contactField)
+bool Contact::_isValideField(std::string string)
 {
-    return isspace(contactField[FIRST_CHAR]) || 
-        contactField.length() > MAX_CHARACTERS || 
-        contactField.empty();
+    return isspace(string[FIRST_CHAR]) || string.empty();
 }
