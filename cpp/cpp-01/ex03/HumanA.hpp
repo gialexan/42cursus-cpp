@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:38:17 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 10:07:51 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/03 12:50:48 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/04 20:07:27 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-# include <iostream>
+# include "Weapon.hpp"
 
 # define RESET			"\033[0m"
 # define RED			"\033[31m"				/* Red */
 # define GREEN			"\033[32m"				/* Green */
 
-class Zombie {
+class  HumanA
+{
     private:
         std::string _name;
+        Weapon &_weapon;
     public:
-        void announce(void);
-        
-        ~Zombie(void);
-        Zombie(std::string name);
+        void attack(void);
+    
+        HumanA(std::string name, Weapon &weapon);
+        ~HumanA(void);
 };
 
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
-        
 #endif

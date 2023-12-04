@@ -6,12 +6,12 @@
 #    By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/11 19:06:44 by gialexan          #+#    #+#              #
-#    Updated: 2023/11/29 19:52:55 by gialexan         ###   ########.fr        #
+#    Updated: 2023/12/03 12:51:32 by gialexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ################################################################################
-##                                PHONEBOOK                                   ##
+##                                EX00                                        ##
 ################################################################################
 
 RESET := \033[0m
@@ -19,7 +19,7 @@ CYAN  := \033[1;36m
 CHECK := \342\234\224
 LOG   := printf "[$(CYAN)$(CHECK)$(RESET)] %s\n"
 
-NAME := 			phonebook
+NAME := 			ex00
 
 
 ################################################################################
@@ -28,7 +28,7 @@ NAME := 			phonebook
 
 OBJ_DIR		:= obj
 
-SRC_FILES	:= 	PhoneBook.cpp Contact.cpp main.cpp
+SRC_FILES	:= 	Zombie.cpp RandomChump.cpp NewZombie.cpp main.cpp
 
 OBJS 		:= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))
 

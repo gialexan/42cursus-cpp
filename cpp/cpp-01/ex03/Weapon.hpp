@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:38:17 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 10:07:51 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/03 12:49:36 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/03 21:04:31 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-# include <iostream>
+#include <iostream>
 
-# define RESET			"\033[0m"
-# define RED			"\033[31m"				/* Red */
-# define GREEN			"\033[32m"				/* Green */
-
-class Zombie {
+class  Weapon
+{
     private:
-        std::string _name;
+        std::string _type;    
     public:
-        void announce(void);
+        const std::string &getType(void);
+        void setType(std::string type);
         
-        ~Zombie(void);
-        Zombie(std::string name);
+        Weapon(void);
+        Weapon(std::string _type);
+        ~Weapon(void);
 };
 
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
-        
 #endif

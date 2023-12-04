@@ -6,7 +6,7 @@
 #    By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/11 19:06:44 by gialexan          #+#    #+#              #
-#    Updated: 2023/12/03 12:51:41 by gialexan         ###   ########.fr        #
+#    Updated: 2023/12/03 12:51:22 by gialexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ NAME := 			ex01
 
 OBJ_DIR		:= obj
 
-SRC_FILES	:= 	PhoneBook.cpp Contact.cpp main.cpp
+SRC_FILES	:= 	Zombie.cpp ZombieHorde.cpp main.cpp
 
 OBJS 		:= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))
 

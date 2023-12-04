@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NewZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:13:45 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 09:27:27 by gialexan         ###   ########.fr       */
+/*   Created: 2023/11/23 20:13:53 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/03 10:22:30 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie *newZombie(std::string string)
+int main(void)
 {
-    Zombie *zombie = new Zombie(string);
-    return (zombie);
+    int n = 10;
+
+    std::cout << RED << "Creating a zombie horde" << RESET << std::endl;
+    Zombie *horde = zombieHorde(n, "zombie");
+    for (int i = 0; i < n; i++)
+        horde[i].announce();
+    std::cout << RED << "Killing the horde of zombies" << RESET << std::endl;
+    delete[] horde;
 }

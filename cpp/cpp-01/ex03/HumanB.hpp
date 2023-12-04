@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:38:17 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 10:07:51 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/03 12:50:40 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/04 20:07:11 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-# include <iostream>
+#include "Weapon.hpp"
 
-# define RESET			"\033[0m"
-# define RED			"\033[31m"				/* Red */
-# define GREEN			"\033[32m"				/* Green */
+#define RESET		"\033[0m"
+#define RED			"\033[31m"				/* Red */
+#define GREEN		"\033[32m"				/* Green */
 
-class Zombie {
+class  HumanB
+{
     private:
         std::string _name;
+        Weapon *_weapon;
     public:
-        void announce(void);
+        void attack(void);
+        void setWeapon(Weapon &weapon);
         
-        ~Zombie(void);
-        Zombie(std::string name);
+        HumanB(std::string name);
+        ~HumanB(void);
 };
 
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
-        
 #endif

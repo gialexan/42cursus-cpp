@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 20:38:17 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 10:07:51 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/03 10:34:57 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class Zombie {
         std::string _name;
     public:
         void announce(void);
-        
+        void setName(std::string string);
+
         ~Zombie(void);
-        Zombie(std::string name);
+        Zombie(void);
 };
 
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
+Zombie *zombieHorde(int N, std::string name);
         
 #endif

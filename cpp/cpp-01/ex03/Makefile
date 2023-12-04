@@ -6,12 +6,12 @@
 #    By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/11 19:06:44 by gialexan          #+#    #+#              #
-#    Updated: 2023/12/03 12:51:41 by gialexan         ###   ########.fr        #
+#    Updated: 2023/12/03 13:34:32 by gialexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ################################################################################
-##                                EX01                                        ##
+##                                EX03                                        ##
 ################################################################################
 
 RESET := \033[0m
@@ -19,7 +19,7 @@ CYAN  := \033[1;36m
 CHECK := \342\234\224
 LOG   := printf "[$(CYAN)$(CHECK)$(RESET)] %s\n"
 
-NAME := 			ex01
+NAME := 			ex03
 
 
 ################################################################################
@@ -28,7 +28,7 @@ NAME := 			ex01
 
 OBJ_DIR		:= obj
 
-SRC_FILES	:= 	PhoneBook.cpp Contact.cpp main.cpp
+SRC_FILES	:= 	main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS 		:= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))
 

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NewZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:13:45 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 09:27:27 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/03 12:50:42 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/04 20:08:35 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie *newZombie(std::string string)
+HumanB::HumanB(std::string name) {_name = name;}
+
+HumanB::~HumanB(void) {}
+
+void HumanB::attack(void)
 {
-    Zombie *zombie = new Zombie(string);
-    return (zombie);
+    std::cout << GREEN << _name << " attacks with their " << _weapon->getType() << std::endl << RESET;
 }
+
+void HumanB::setWeapon(Weapon &weapon) {_weapon = &weapon;}
