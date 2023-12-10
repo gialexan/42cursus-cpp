@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 21:03:16 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 09:52:57 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/10 09:53:08 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,28 @@ void Harl::_error(void)
 
 void Harl::complain(std::string level)
 {
-    std::string levels[TOTAL_LEVEL] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*functionPTR[TOTAL_LEVEL])(void) = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl:: _error};
+  std::string levels[TOTAL_LEVEL] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+  void (Harl::*functionPTR[TOTAL_LEVEL])(void) = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl:: _error};
+  
+  int currentLevel = -1;
+  for (int i = 0; i < TOTAL_LEVEL; i++)
+  {
+    if (!levels[i].compare(level))
+      currentLevel = i;
+  }
 
-    for (int i = 0; i < TOTAL_LEVEL; i++)
-    {
-      if (!levels[i].compare(level))
-        (this->*functionPTR[i])();
-    }
+  switch (currentLevel)
+  {
+    case 0:
+      (this->*functionPTR[DEBUG_LEVEL])();
+    case 1:
+      (this->*functionPTR[INFO_LEVEL])();
+    case 2:
+      (this->*functionPTR[WARNING_LEVEL])();
+    case 3:
+      (this->*functionPTR[ERROR_LEVEL])();
+      break;
+    default:
+      std::cout << RED << "[DEFAULT]\n" << "Probably complaining about insignificant problems" << std::endl << RESET;
+  }
 }

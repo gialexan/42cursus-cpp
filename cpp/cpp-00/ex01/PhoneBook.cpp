@@ -6,13 +6,13 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 17:51:32 by gialexan          #+#    #+#             */
-/*   Updated: 2023/11/20 16:36:48 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:51:04 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void) {_contactNb = -1;}
+PhoneBook::PhoneBook(void) : _contactNb(-1) {}
 
 PhoneBook::~PhoneBook(void) {}
 

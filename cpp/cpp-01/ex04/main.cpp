@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 20:13:42 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 09:52:10 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/04 20:12:51 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/09 20:47:12 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "FileReplacer.hpp"
 
-Zombie::Zombie(void) {}
-
-Zombie::~Zombie(void)
+int main(int argc, char **argv)
 {
-  std::cout << _name << " is dead" << std::endl;
-}
+    if (argc != 4)
+    {
+        std::cout << "Usage: ./ex04 <filename> <string_to_remove> <string_to_insert>" << std::endl;
+        return (1);
+    }
 
-void Zombie::announce(void)
-{
-  std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void Zombie::setName(std::string name)
-{
-  _name = name;
+    FileReplacer("txt", "JOÃO", "WELTON");
 }

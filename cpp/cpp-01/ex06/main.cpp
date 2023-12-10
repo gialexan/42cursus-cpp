@@ -5,31 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 12:49:38 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 09:52:39 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/10 09:06:00 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/10 09:54:26 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Harl.hpp"
 
-int main(void)
+static std::string toUpperStr(std::string str);
+
+int main(int argc, char **argv)
 {
+    if (argc != 2)
     {
-        Weapon club = Weapon("crude spiked club");
-        
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
+        std::cout << "Usage: ./harl [DEBUG|INFO|WARNING|ERROR]" << std::endl;
+        return (1);
     }
-    {
-        Weapon club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
-    }
+    Harl harl;
+    std::string level = toUpperStr(argv[1]); 
+    harl.complain(level);
+}
+
+static std::string toUpperStr(std::string str)
+{
+    std::string::iterator it;
+    std::string upperStr;
+    for (it = str.begin(); it != str.end(); it++)
+        upperStr += (char)std::toupper(*it);
+    return (upperStr);
 }

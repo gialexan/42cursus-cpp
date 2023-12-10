@@ -6,13 +6,13 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 20:13:42 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 09:48:11 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:50:09 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string string) {_name = string;}
+Zombie::Zombie(std::string name) : _name(name) {}
 
 Zombie::~Zombie(void)
 {

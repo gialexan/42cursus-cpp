@@ -6,13 +6,13 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 12:50:42 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/04 20:08:35 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:48:36 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) {_name = name;}
+HumanB::HumanB(std::string name) : _name(name) {}
 
 HumanB::~HumanB(void) {}
 
