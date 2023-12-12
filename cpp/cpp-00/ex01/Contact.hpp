@@ -6,21 +6,21 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 17:52:57 by gialexan          #+#    #+#             */
-/*   Updated: 2023/11/20 15:59:50 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/10 12:35:11 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include <iostream>
+# include <iostream>
 
 # define RESET			"\033[0m"
 # define BLACK			"\033[30m"				/* Black */
 # define BLUE			"\033[34m"				/* Blue */
 
-#define FIRST_CHAR 0
-#define MAX_CHARACTERS 15
+# define FIRST_CHAR 0
+# define MAX_CHARACTERS 15
 
 class Contact
 {

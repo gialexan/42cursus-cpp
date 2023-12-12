@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 12:50:40 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 12:34:40 by gialexan         ###   ########.fr       */
+/*   Created: 2023/12/10 12:30:30 by gialexan          #+#    #+#             */
+/*   Updated: 2023/12/10 13:46:26 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#include "Fixed.hpp"
 
-# include "Weapon.hpp"
-
-# define RESET		"\033[0m"
-# define RED			"\033[31m"				/* Red */
-# define GREEN		"\033[32m"				/* Green */
-
-class  HumanB
+int main(void)
 {
-    private:
-        std::string _name;
-        Weapon *_weapon;
-    public:
-        void attack(void);
-        void setWeapon(Weapon &weapon);
-        
-        HumanB(std::string name);
-        ~HumanB(void);
-};
-
-#endif
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
+    
+    c = b;
+    
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
+}

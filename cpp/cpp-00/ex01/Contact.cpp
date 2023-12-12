@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 17:52:01 by gialexan          #+#    #+#             */
-/*   Updated: 2023/11/20 16:15:04 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/10 12:07:49 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,25 @@ Contact::Contact(void) {}
 
 Contact::~Contact(void) {}
 
-std::string Contact::getFirstName(void) {return _firstName;}
+std::string Contact::getFirstName(void)
+{
+    return _firstName;
+}
 
-std::string Contact::getLastName(void) {return _lastName;};
+std::string Contact::getLastName(void)
+{
+    return _lastName;
+};
 
-std::string Contact::getPhone(void) {return _phone;}
+std::string Contact::getPhone(void)
+{
+    return _phone;
+}
 
-std::string Contact::getNickname(void) {return _nickname;}
+std::string Contact::getNickname(void)
+{
+    return _nickname;
+}
 
 Contact Contact::createContact(void)
 {

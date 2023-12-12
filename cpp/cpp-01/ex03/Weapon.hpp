@@ -6,14 +6,14 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 12:49:36 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/03 21:04:31 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/10 12:35:38 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
 
-#include <iostream>
+# include <iostream>
 
 class  Weapon
 {

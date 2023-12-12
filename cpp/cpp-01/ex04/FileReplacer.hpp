@@ -6,16 +6,16 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 21:33:43 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 09:52:50 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/10 12:34:32 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILEREPLACER_HPP
 # define FILEREPLACER_HPP
 
-#include <iostream>
-#include <string>
-#include <fstream>
+# include <iostream>
+# include <string>
+# include <fstream>
 
 class FileReplacer
 {
