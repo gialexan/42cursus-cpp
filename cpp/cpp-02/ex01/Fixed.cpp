@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 11:51:06 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 20:03:59 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/16 17:32:21 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,10 @@ int Fixed::toInt(void) const
 	return (_value >> _fractionalBits);
 }
 
-std::ostream& operator<<(std::ostream& output, const Fixed& src)
+/*
+ * The output operator;
+*/
+std::ostream& operator << (std::ostream& output, const Fixed& src)
 {
 	output << src.toFloat();
 	return (output);
