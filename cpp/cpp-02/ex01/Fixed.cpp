@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 11:51:06 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/16 17:32:21 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/16 18:57:27 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int Fixed::getRawBits() const
 /*
     ? Copy constructor
     * A new object is created from an existing object (as a copy of the existing objec)
-	this->_num = obj.getRawBits();
+	_num = obj.getRawBits();
 */
 Fixed::Fixed(const Fixed &obj)
 {
@@ -52,7 +52,7 @@ Fixed::Fixed(const Fixed &obj)
 Fixed &Fixed::operator=(const Fixed& obj)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    this->_value = obj.getRawBits();
+    _value = obj.getRawBits();
     return *this;
 }
 

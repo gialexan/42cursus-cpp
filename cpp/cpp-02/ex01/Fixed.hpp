@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 10:47:07 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/10 19:58:04 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:03:07 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Fixed
         Fixed(float const number);
         Fixed(void);                           // Default constructor
         Fixed(const Fixed &obj);              // Copy constructor
-        Fixed &operator=(const Fixed& obj);  // Copy assignment operator
+        Fixed &operator=(const Fixed &obj);  // Copy assignment operator
         ~Fixed(void);                       // Destructor
 };
 
