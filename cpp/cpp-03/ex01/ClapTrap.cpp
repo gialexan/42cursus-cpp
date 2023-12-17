@@ -6,13 +6,13 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 18:52:27 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/17 19:00:49 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:29:47 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _name(""), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(void): _name(""), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap default Constructor called" << std::endl;
 }
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
 
 ClapTrap::~ClapTrap(void) 
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "ClassTrap Destructor called" << std::endl;
 }
 
 /*
@@ -33,7 +33,7 @@ ClapTrap::~ClapTrap(void)
 */
 ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ClassTrap Copy assignment operator called" << std::endl;
     
     _name = obj._name;
     _hitPoints = obj._hitPoints;
@@ -49,7 +49,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
 */
 ClapTrap::ClapTrap(const ClapTrap &obj)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClassTrap Copy constructor called" << std::endl;
     *this = obj;
 }
 
