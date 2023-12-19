@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 18:52:15 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/18 21:42:19 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/18 21:43:37 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ClapTrap
         void beRepaired(unsigned int amount);
 
         ClapTrap(std::string name);
-        ClapTrap(void);                                 // Default constructor
+        ClapTrap(void);                                // Default constructor
         ClapTrap(const ClapTrap &obj);                // Copy constructor
         ClapTrap &operator=(const ClapTrap &obj);    // Copy assignment operator
         ~ClapTrap(void);                            // Destructor
