@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 10:47:07 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/16 19:03:07 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:35:49 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ class Fixed
         ~Fixed(void);                       // Destructor
 };
 
-std::ostream & operator << (std::ostream &COUT, const Fixed &fixed);
+std::ostream &operator<<(std::ostream &COUT, const Fixed &fixed);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 21:35:12 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/18 21:44:07 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/24 19:43:36 by gialexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class FragTrap:public ClapTrap
         FragTrap(const FragTrap &obj);                // Copy constructor
         FragTrap(void);                              // Default constructor
         FragTrap &operator=(FragTrap const &obj);   // Copy assignment operator
-        ~FragTrap();                               // Destructor
+        ~FragTrap(void);                               // Destructor
 };
 
 #endif
