@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 21:03:02 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/25 21:13:11 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/30 10:40:53 by gilmar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,13 @@ class WrongAnimal
 		std::string getType(void) const;
 		
 		WrongAnimal(const std::string type);
-		WrongAnimal();
-		WrongAnimal( WrongAnimal const & src );
-		~WrongAnimal();
-
-		WrongAnimal &		operator=( WrongAnimal const & rhs );
+		WrongAnimal(void);								       // Default constructor
+		WrongAnimal(WrongAnimal const &src);				  // Copy constructor
+		WrongAnimal &operator=(WrongAnimal const &rhs);		 // Copy assignment operator
+		~WrongAnimal(void);									// Destructor
 
 };
 
-std::ostream &			operator<<( std::ostream & o, WrongAnimal const & i );
+std::ostream &operator<<(std::ostream &o, WrongAnimal const &i);
 
 #endif /* ***************************************************** WRONGANIMAL_H */

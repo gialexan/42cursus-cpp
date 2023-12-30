@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:36:18 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/25 18:32:19 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/30 10:22:19 by gilmar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Animal
 		
 		Animal(const std::string type);
 		Animal(void);							   	   // Default constructor
-		Animal(Animal const & obj);					  // Copy constructor
-		Animal &operator=(Animal const & rhs);	 	 // Copy assignment operator
+		Animal(Animal const &obj);					  // Copy constructor
+		Animal &operator=(Animal const &rhs);	 	 // Copy assignment operator
 		~Animal(void);								// Destructor
 };
 

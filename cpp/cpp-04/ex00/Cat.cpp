@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/30 09:37:03 by gilmar            #+#    #+#             */
+/*   Updated: 2023/12/30 10:24:57 by gilmar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 
 /*
@@ -6,21 +18,23 @@
 
 Cat::Cat(void) : Animal("Cat")
 {
+	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat & src)
+Cat::Cat(const Cat &src)
 {
+	std::cout << "Cat copy constructor called" << std::endl;
+	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Cat::~Cat()
+Cat::~Cat(void)
 {
+	std::cout << "Cat destructor called" << std::endl;
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -28,16 +42,17 @@ Cat::~Cat()
 
 Cat &Cat::operator=(Cat const &rhs)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	std::cout << "Cat assignment operator called" << std::endl;
+	if (this != &rhs)
+	{
+		*this = rhs;
+	}
 	return *this;
 }
 
 std::ostream &operator<<(std::ostream &o, Cat const &i)
 {
-	//o << "Value = " << i.getValue();
+	o << "Value = " << i.getType();
 	return o;
 }
 
@@ -50,10 +65,8 @@ void Cat::makeSound(void) const
 ** --------------------------------- METHODS ----------------------------------
 */
 
-
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
-
 
 /* ************************************************************************** */

@@ -11,10 +11,10 @@ class Dog : public Animal
 	public:
 		void makeSound(void) const;
 
-		Dog(void);
-		Dog(Dog const &src);
-		Dog &operator=(Dog const & rhs);
-		~Dog(void);
+		Dog(void);							   // Default constructor
+		Dog(Dog const &src);                  // Copy constructor
+		Dog &operator=(Dog const &rhs);      // Copy assignment operator
+		~Dog(void);							// Destructor
 };
 
 std::ostream &operator<<( std::ostream &out, Dog const &dog);

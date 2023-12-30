@@ -10,10 +10,10 @@ class Cat : public Animal
 	public:
 		void makeSound(void) const;
 	
-		Cat(void);
-		Cat(Cat const & src);
-		Cat &operator=(Cat const & rhs);
-		~Cat(void);
+		Cat(void);							   // Default constructor
+		Cat(Cat const &src);				  // Copy constructor
+		Cat &operator=(Cat const &rhs);      // Copy assignment operator
+		~Cat(void);							// Destructor
 };
 
 std::ostream &operator<<(std::ostream & out, Cat const & cat);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 21:02:54 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/25 21:07:49 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/30 10:41:28 by gilmar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@
 
 class WrongCat : public WrongAnimal
 {
-
 	public:
 		void makeSound(void) const;
 
-		WrongCat();
-		WrongCat( WrongCat const & src );
-		~WrongCat();
-
-		WrongCat &		operator=( WrongCat const & rhs );
+		WrongCat(void);								   // Default constructor
+		WrongCat(WrongCat const &src);				  // Copy constructor
+		WrongCat &operator=(WrongCat const &rhs);    // Copy assignment operator
+		~WrongCat(void);							// Destructor
 
 };
 
-std::ostream &			operator<<( std::ostream & o, WrongCat const & i );
+std::ostream &operator<<(std::ostream &o, WrongCat const &i);
 
 #endif /* ******************************************************** WRONGCAT_H */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gialexan <gialexan@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 21:06:43 by gialexan          #+#    #+#             */
-/*   Updated: 2023/12/25 21:23:55 by gialexan         ###   ########.fr       */
+/*   Updated: 2023/12/30 10:35:49 by gilmar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,61 +17,56 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-WrongCat::WrongCat() : WrongAnimal("WrongCat")
+WrongCat::WrongCat(void) : WrongAnimal("Wrong Cat")
 {
+	std::cout << "Wrong Cat default constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat & src )
+WrongCat::WrongCat(const WrongCat & src)
 {
+	std::cout << "Wrong Cat copy constructor called" << std::endl;
 }
-
-WrongAnimal::WrongAnimal(const std::string type) : _type(type)
-{
-}
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-WrongCat::~WrongCat()
+WrongCat::~WrongCat(void)
 {
+	std::cout << "Wrong Cat default constructor called" << std::endl;
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-WrongCat &				WrongCat::operator=( WrongCat const & rhs )
+WrongCat &WrongCat::operator=(WrongCat const &rhs)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	std::cout << "Wrong Cat assignment operator called" << std::endl;
+	if ( this != &rhs )
+	{
+		*this = rhs;
+	}
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, WrongCat const & i )
+std::ostream &operator<<( std::ostream & o, WrongCat const & i )
 {
-	//o << "Value = " << i.getValue();
+	o << "Value = " << i.getType();
 	return o;
 }
 
 void WrongCat::makeSound(void) const
 {
-	std::cout << "*** Meow 🐱! ***"	<<  std::endl;
+	std::cout << "*** Wrong Meow 🐱! ***" <<  std::endl;
 }
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
-
 
 /* ************************************************************************** */
