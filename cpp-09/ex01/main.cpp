@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Iter.h                                             :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gilmar <gilmar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:07:14 by gilmar            #+#    #+#             */
-/*   Updated: 2024/02/22 18:33:34 by gilmar           ###   ########.fr       */
+/*   Created: 2024/02/13 16:56:32 by gilmar            #+#    #+#             */
+/*   Updated: 2024/02/14 10:39:54 by gilmar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_H
-# define ITER_H
+#include "RPN.hpp"
 
-#include <iostream>
-
-template <typename T, typename Func>
-void Iter(T *array, size_t length, Func func)
+int main(int argc, char **argv)
 {
-    for (size_t i = 0; i < length; i++)
+    if (argc != 2)
     {
-        func(array[i]);
+        std::cerr << "Usage: ./rpn \"expression\"" << std::endl;
+        return 1;
     }
-}
 
-template<typename T>
-void PrintElement(const T& element) {
-    std::cout << element << " ";
-}
+    try
+    {
+        std::cout << RPN::eval(argv[1]) << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
 
-#endif // !ITER_H
+    return EXIT_SUCCESS;
+}
